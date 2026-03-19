@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Linkedin, Phone, CheckCircle} from "lucide-react";
 import { MessageCircle } from "lucide-react";
-import heroImg from "@/assets/hero-headshot.jpg";
+import heroImg from "@/assets/hero-headshot.jpeg";
 import { smoothEase } from "@/lib/animation";
 
 const ContactSection = () => {

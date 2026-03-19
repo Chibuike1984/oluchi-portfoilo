@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heroImg from "@/assets/hero-headshot.jpg";
+import heroImg from "@/assets/hero-headshot.jpeg";
 import { smoothEase } from "@/lib/animation";
 
 const TestimonialSection = () => (

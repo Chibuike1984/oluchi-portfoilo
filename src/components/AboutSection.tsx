@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import aboutImg from "@/assets/about-photo.jpg";
+import aboutImg from "@/assets/about-photo.jpeg";
 import { smoothEase } from "@/lib/animation";
 
 const fadeUp = {
