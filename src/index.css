@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Geist+Sans:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 224 76% 48%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 215 16% 47%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.5rem;
+
+    --surface: 0 0% 0% / 0.02;
+
+    --shadow-card: 0 0 0 1px rgba(0,0,0,.05), 0 2px 4px rgba(0,0,0,.02), 0 10px 20px rgba(0,0,0,.04);
+    --shadow-card-hover: 0 0 0 1px rgba(0,0,0,.05), 0 20px 40px rgba(0,0,0,.08);
+    --shadow-hero-image: 0 25px 50px -12px rgba(0,0,0,.15);
+
+    --font-display: 'Instrument Sans', system-ui, sans-serif;
+    --font-body: 'Geist Sans', system-ui, sans-serif;
+
+    --ease-smooth: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .section-spacing {
+    @apply py-24 px-6;
+  }
+
+  .container-narrow {
+    @apply max-w-6xl mx-auto;
+  }
+
+  .card-elevated {
+    box-shadow: var(--shadow-card);
+    transition: all 300ms var(--ease-smooth);
+  }
+
+  .card-elevated:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-4px);
+  }
+
+  .input-minimal {
+    @apply border-0 border-b rounded-none bg-transparent px-0 py-3 text-foreground placeholder:text-muted-foreground focus-visible:ring-0 focus-visible:outline-none;
+    border-bottom-width: 1px;
+    border-color: hsl(var(--border));
+    transition: border-color 300ms var(--ease-smooth);
+  }
+
+  .input-minimal:focus {
+    border-color: hsl(var(--primary));
+  }
+
+  .btn-primary-custom {
+    @apply inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-medium;
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    transition: all 300ms var(--ease-smooth);
+  }
+
+  .btn-primary-custom:hover {
+    background-color: hsl(var(--primary-hover));
+    transform: translateY(-2px);
+  }
+
+  .btn-primary-custom:active {
+    transform: scale(0.98);
+  }
+
+  .btn-outline-custom {
+    @apply inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-medium border;
+    color: hsl(var(--foreground));
+    border-color: hsl(var(--border));
+    transition: all 300ms var(--ease-smooth);
+  }
+
+  .btn-outline-custom:hover {
+    background-color: hsl(var(--accent));
+    transform: translateY(-2px);
+  }
+
+  .btn-outline-custom:active {
+    transform: scale(0.98);
+  }
+}
