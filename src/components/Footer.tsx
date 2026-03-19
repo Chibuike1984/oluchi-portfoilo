@@ -6,7 +6,7 @@ const Footer = () => (
       </p>
       <div className="flex gap-6">
         <a href="#" className="text-xs text-muted hover:text-foreground transition-colors font-body">LinkedIn</a>
-        <a href="mailto:oluchi.esther@example.com" className="text-xs text-muted hover:text-foreground transition-colors font-body">Email</a>
+        <a href="mailto:Oluchia904@gmail.com" className="text-xs text-muted hover:text-foreground transition-colors font-body">Email</a>
       </div>
     </div>
   </footer>

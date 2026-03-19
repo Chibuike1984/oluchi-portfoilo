@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Linkedin, Phone, CheckCircle } from "lucide-react";
+import { Mail, Linkedin, Phone, CheckCircle} from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import heroImg from "@/assets/hero-headshot.jpg";
 import { smoothEase } from "@/lib/animation";
 
@@ -30,15 +31,22 @@ const ContactSection = () => {
               Ready to discuss how I can contribute to your team's growth? Reach out through any of the channels below.
             </p>
             <div className="space-y-4">
-              <a href="mailto:oluchi.esther@example.com" className="flex items-center gap-3 text-sm text-muted hover:text-foreground transition-colors font-body">
-                <Mail size={16} /> oluchi.esther@example.com
+              <a href="mailto:Oluchia904@gmail.com" className="flex items-center gap-3 text-sm text-muted hover:text-foreground transition-colors font-body">
+                <Mail size={16} /> Oluchia904@gmail.com
               </a>
               <a href="https://linkedin.com/in/okafor-oluchi-esther" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-muted hover:text-foreground transition-colors font-body">
                 <Linkedin size={16} /> linkedin.com/in/okafor-oluchi-esther
               </a>
               <div className="flex items-center gap-3 text-sm text-muted font-body">
-                <Phone size={16} /> +234 XXX XXX XXXX
+   
+                <a href="tel:+2347070760292" className="flex items-center gap-3 text-sm text-muted hover:text-foreground transition-colors font-body">
+                  <Phone size={16} /> +234 707 076 0292
+                </a>
+                <a href="https://wa.me/2349125542826" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-muted hover:text-foreground transition-colors font-body">
+                  <MessageCircle size={16} /> +234 912 554 2826
+                </a>
               </div>
+              
             </div>
           </motion.div>
 
